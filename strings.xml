@@ -1,0 +1,21 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">QuitBlowinUpMyPhone</string>
+
+    <!-- Button Text -->
+    <string name="start_button">Start</string>
+    <string name="stop_button">Stop</string>
+
+    <!-- Toast Messages -->
+    <string name="silenced_message">Persistent caller has been silenced!</string>
+    <string name="no_permission_message">You do not have permission to access this feature.</string>
+
+    <!-- Permissions -->
+    <string name="permission_title">Permission Request</string>
+    <string name="permission_message">"This app requires access to your phone\'s call log and contacts to function properly"</string>
+    <string name="permission_button">Grant</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Error</string>
+    <string name="error_message">An error has occurred. Please try again later.</string>
+</resources>
