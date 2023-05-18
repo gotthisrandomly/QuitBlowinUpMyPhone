@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.quit" android:installLocation="auto">
+  <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" android:maxSdkVersion="33"/>
+  <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
+  <application android:versionCode="11" android:versionName="1.1">
+    <activity android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:resizeableActivity="true" android:name="com.quit.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:resizeableActivity="true" android:name="com.quit.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.PHONE_STATE"/>
+      </intent-filter>
+    </activity>
+    <activity-alias android:name="com.quit.app_name"/>
+    <service android:enabled="true" android:exported="false" android:name="com.quit.SilenceService"/>
+    <service android:enabled="true" android:exported="false" android:name="com.quit.PersistentCallSilencer"/>
+    <service android:enabled="true" android:exported="false" android:name="com.quit.SilenceTask"/>
+    <service android:enabled="true" android:exported="false" android:name="com.quit.LayoutInflater"/>
+    <receiver android:enabled="true" android:exported="false" android:name="com.quit.SilenceReceiver"/>
+    <provider android:name="com.quit.SilenceProvider" android:authorities="com.quit.provider" android:exported="true"/>
+    <meta-data/>
+    <grant-uri-permission/>
+    <meta-data/>
+    <path-permission/>
+  </application>
+</manifest>
